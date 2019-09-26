@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
-import Wrapper from './Wrapper';
-import Navbar from './Navbar';
-import Jumbotron from './Jumbotron';
-import Container from './Container';
-import TileCard from './TileCard';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Wrapper from './components/Wrapper';
+import Navbar from './components/Navbar';
+import Jumbotron from './components/Jumbotron';
+import Container from './components/Container';
+import TileCard from './components/TileCard';
+import players from "./players.json";
 
 
 
@@ -15,7 +17,10 @@ function App() {
       <Navbar />
       <Jumbotron />
       <Container>
-        <TileCard />
+        <TileCard 
+        name={players[0].name}
+        image={players[0].image}
+        />
       </Container>
     </Wrapper>
   );
