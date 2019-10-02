@@ -6,12 +6,15 @@ import Card from 'react-bootstrap/Card';
 function TileCard(props) {
 
     return (
-        <Card>
-            <Card.Img variant="top" src={props.image} />
-            <Card.Body>
-                <Card.Title>{props.name}</Card.Title>
-            </Card.Body>
-        </Card >
+        <button
+        >
+            <Card>
+                <Card.Img variant="top" src={props.image} />
+                <Card.Body>
+                    <Card.Title>{props.name}</Card.Title>
+                </Card.Body>
+            </Card >
+        </button>
     )
 }
 

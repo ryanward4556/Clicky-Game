@@ -1,7 +1,7 @@
 import React from 'react';
 import "./style.css";
 
-function Navbar() {
+function Navbar(props) {
     return (
 
         <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
@@ -11,7 +11,7 @@ function Navbar() {
             </div>
             <div class="ml-auto">
                 <h3 class="navbar-nav mx-auto">
-                    Score: 0 | Top Score: 0
+                    Score: {props.score} | Top Score: {props.topScore}
                     </h3>
             </div>
         </nav>)
