@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "./style.css";
 import Card from 'react-bootstrap/Card';
-// import { ToggleButton } from 'react-bootstrap';
 
 
 class TileCard extends Component {
@@ -11,27 +10,27 @@ class TileCard extends Component {
     }
 
     handleToggle(e) {
-        console.log(this.state.active)
-
         const currentState = this.state.active;
+        console.log(currentState)
+
         this.setState({
             active: !currentState
         });
-        console.log(this.state.active)
+        console.log(currentState)
     }
 
     render() {
         return (
-
-            <Card toggle={this.state.active ? "toggle" : null}
-                onClick={this.handleToggle.bind(this)}
-            >
-                <Card.Img variant="top" src={this.props.image} />
-                <Card.Body>
-                    <Card.Title>{this.props.name}</Card.Title>
-                </Card.Body>
-            </Card >
-
+            <button toggle={this.state.active ? "toggle" : null}
+                onClick={this.handleToggle.bind(this)}>
+                <Card
+                >
+                    <Card.Img variant="top" src={this.props.image} />
+                    <Card.Body>
+                        <Card.Title>{this.props.name}</Card.Title>
+                    </Card.Body>
+                </Card >
+            </button>
         )
     }
 }
