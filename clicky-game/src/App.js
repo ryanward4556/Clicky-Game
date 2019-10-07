@@ -7,28 +7,29 @@ import Jumbotron from './components/Jumbotron';
 // import TileCardContainer from './components/TileCardContainer';
 import TileCard from './components/TileCard';
 import { Container, Row, Col } from 'react-bootstrap'
-import data from "./players.json";
+import players from "./players.json";
 
 
 class App extends Component {
 
   state = {
-    data: data,
+    data: players,
     score: 0,
     topScore: 0,
   }
 
-  componentDidMount() {
-    this.setState({ data: this.shuffleData(this.state.data) })
-  }
+  // componentDidMount() {
+  //   this.setState({ data: this.shuffleData(this.state.data) })
+  //   // this.state.data.map(item => console.log(item))
+  // }
 
   resetData() {
-    const resetData = data.map(item => ({ ...item, clicked: false }))
+    const resetData = this.state.data.map(item => ({ ...item, clicked: false }))
     return resetData;
   }
 
   handleCorrectGuess = newData => {
-    const { topScore, score } = this.state;
+    const { topScore, score } = newData.state; //  changed 'this' to newData
     const newScore = score + 1;
     const newTopScore = Math.max(newScore, topScore);
 
@@ -37,7 +38,7 @@ class App extends Component {
 
   handleIncorrectGuess = newData => {
     this.setState({
-      data: this.resetData(data),
+      data: this.resetData(this.state.data),
       score: 0
     })
   }
@@ -49,6 +50,10 @@ class App extends Component {
       data[i] = data[j];
       data[j] = temp;
     }
+  }
+
+  consoleMe = () => {
+    console.log(this.state)
   }
 
   handleItemClick = id => {
@@ -73,16 +78,16 @@ class App extends Component {
         <Jumbotron />
         <Container>
           <Row>
-            {this.state.data.map(item => (
-              <Col sm={3} >
+            {this.state.data.map(item =>
+              (<Col sm={3} >
                 <TileCard
-                  // id={item.id}
-                  // onClick={this.handleItemClick(this.state.id)}
+                  key={item.id}
+                  onClick={() => this.handleItemClick(this.state.id)}
                   name={item.name}
                   image={item.image}>
                 </TileCard>
-              </Col>
-            ))}
+              </Col>)
+            )}
           </Row>
         </Container>;
       </Wrapper >

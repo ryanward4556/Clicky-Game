@@ -6,9 +6,9 @@ import Card from 'react-bootstrap/Card';
 function TileCard(props) {
 
     return (
-        <button>
+        <button key={props.id} onClick={props.onClick}>
             <Card>
-                <Card.Img variant="top" src={props.image} />
+                <Card.Img variant="top" src={props.image}/>
                 <Card.Body>
                     <Card.Title>{props.name}</Card.Title>
                 </Card.Body>
