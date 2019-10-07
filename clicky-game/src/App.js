@@ -79,8 +79,8 @@ class App extends Component {
                   // id={item.id}
                   // onClick={this.handleItemClick(this.state.id)}
                   name={item.name}
-                  image={item.image}
-                />
+                  image={item.image}>
+                </TileCard>
               </Col>
             ))}
           </Row>
