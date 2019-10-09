@@ -57,6 +57,7 @@ class App extends Component {
   }
 
   handleItemClick = id => {
+    console.log("we in handleItemClick");
     let guessedCorrect = false;
     const newData = this.state.data.map(item => {
       const newItem = { ...item };
