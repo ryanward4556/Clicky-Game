@@ -19,24 +19,32 @@ class App extends Component {
   }
 
   // componentDidMount() {
-  //   this.setState({ data: this.shuffleData(this.state.data) })
-  //   // this.state.data.map(item => console.log(item))
+
   // }
 
+  startApp() {
+    this.setState({ data: this.shuffleData(this.state.data) })
+    this.state.data.map(item => console.log(item))
+  }
+
   resetData() {
+    console.log("RESET")
     const resetData = this.state.data.map(item => ({ ...item, clicked: false }))
     return resetData;
   }
 
   handleCorrectGuess = newData => {
-    const { topScore, score } = newData.state; //  changed 'this' to newData
+    console.log("CORRECT")
+
+    const { topScore, score } = this.state; //  changed 'this' to newData
     const newScore = score + 1;
     const newTopScore = Math.max(newScore, topScore);
 
-    this.setState({ topScore: newTopScore });
+    this.setState({ score: newScore, topScore: newTopScore });
   }
 
   handleIncorrectGuess = newData => {
+    console.log("incorrect")
     this.setState({
       data: this.resetData(this.state.data),
       score: 0
@@ -52,24 +60,23 @@ class App extends Component {
     }
   }
 
-  consoleMe = () => {
-    console.log(this.state)
-  }
-
   handleItemClick = id => {
-    console.log("we in handleItemClick");
     let guessedCorrect = false;
     const newData = this.state.data.map(item => {
       const newItem = { ...item };
       if (newItem.id === id) {
         if (!newItem.clicked) {
-          newItem.clicked = true;
+          item.clicked = true;
           guessedCorrect = true;
-        }
+          console.log(item)
+        } 
       }
       return newItem;
+
     })
+    this.shuffleData(this.state.data)
     guessedCorrect ? this.handleCorrectGuess(newData) : this.handleIncorrectGuess(newData);
+    
   }
 
   render() {
@@ -83,7 +90,7 @@ class App extends Component {
               (<Col sm={3} >
                 <TileCard
                   key={item.id}
-                  onClick={() => this.handleItemClick(this.state.id)}
+                  onClick={() => this.handleItemClick(item.id)}
                   name={item.name}
                   image={item.image}>
                 </TileCard>
@@ -95,23 +102,6 @@ class App extends Component {
     );
   }
 }
-
-
-// if (currentActive === true) {
-//   this.setState({
-//     gameOver: true
-//   })
-// } else if (currentCount < 12) {
-//   this.setState({
-//     active: true,
-//     count: (currentCount + 1)
-//   });
-//   this.handleShuffle(players)
-// } else {
-//   this.setState({
-//     currentScore: currentScore + 1
-//   })
-// }
 
 
 export default App;
