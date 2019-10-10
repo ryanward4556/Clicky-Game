@@ -1,17 +1,27 @@
 {
   "files": {
-    "main.css": "/Clicky-Game/static/css/main.a8bfe643.chunk.css",
-    "main.js": "/Clicky-Game/static/js/main.bc64b9b3.chunk.js",
-    "main.js.map": "/Clicky-Game/static/js/main.bc64b9b3.chunk.js.map",
+    "main.css": "/Clicky-Game/static/css/main.0b8e7058.chunk.css",
+    "main.js": "/Clicky-Game/static/js/main.fcaa88e0.chunk.js",
+    "main.js.map": "/Clicky-Game/static/js/main.fcaa88e0.chunk.js.map",
     "runtime-main.js": "/Clicky-Game/static/js/runtime-main.ef072257.js",
     "runtime-main.js.map": "/Clicky-Game/static/js/runtime-main.ef072257.js.map",
     "static/css/2.7c4efcaa.chunk.css": "/Clicky-Game/static/css/2.7c4efcaa.chunk.css",
-    "static/js/2.c440b504.chunk.js": "/Clicky-Game/static/js/2.c440b504.chunk.js",
-    "static/js/2.c440b504.chunk.js.map": "/Clicky-Game/static/js/2.c440b504.chunk.js.map",
+    "static/js/2.082673bf.chunk.js": "/Clicky-Game/static/js/2.082673bf.chunk.js",
+    "static/js/2.082673bf.chunk.js.map": "/Clicky-Game/static/js/2.082673bf.chunk.js.map",
     "index.html": "/Clicky-Game/index.html",
-    "precache-manifest.7ef5cb43f2b81146f6bbab17042fd535.js": "/Clicky-Game/precache-manifest.7ef5cb43f2b81146f6bbab17042fd535.js",
+    "precache-manifest.a97881d247c83ec70bb1cb59aa533e34.js": "/Clicky-Game/precache-manifest.a97881d247c83ec70bb1cb59aa533e34.js",
     "service-worker.js": "/Clicky-Game/service-worker.js",
     "static/css/2.7c4efcaa.chunk.css.map": "/Clicky-Game/static/css/2.7c4efcaa.chunk.css.map",
-    "static/css/main.a8bfe643.chunk.css.map": "/Clicky-Game/static/css/main.a8bfe643.chunk.css.map"
+    "static/css/main.0b8e7058.chunk.css.map": "/Clicky-Game/static/css/main.0b8e7058.chunk.css.map",
+    "static/media/allison.png": "/Clicky-Game/static/media/allison.327957d0.png",
+    "static/media/deligt.png": "/Clicky-Game/static/media/deligt.295274c0.png",
+    "static/media/frenkie.png": "/Clicky-Game/static/media/frenkie.8ae5393d.png",
+    "static/media/hazard.jpg": "/Clicky-Game/static/media/hazard.a01051b0.jpg",
+    "static/media/mbappe.png": "/Clicky-Game/static/media/mbappe.c7f0857d.png",
+    "static/media/messi.png": "/Clicky-Game/static/media/messi.a5215017.png",
+    "static/media/modric.png": "/Clicky-Game/static/media/modric.1524c8c5.png",
+    "static/media/ramos.png": "/Clicky-Game/static/media/ramos.de0d4e9d.png",
+    "static/media/ronaldo.png": "/Clicky-Game/static/media/ronaldo.ed48c9d2.png",
+    "static/media/vandijk.jpg": "/Clicky-Game/static/media/vandijk.c266120d.jpg"
   }
 }
