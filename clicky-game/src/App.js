@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Wrapper from './components/Wrapper';
 import Navbar from './components/Navbar';
 import Jumbotron from './components/Jumbotron';
-// import TileCardContainer from './components/TileCardContainer';
 import TileCard from './components/TileCard';
 import { Container, Row, Col } from 'react-bootstrap'
 import data from "./data.json"
@@ -24,15 +23,13 @@ class App extends Component {
   }
 
   resetData() {
-    console.log("RESET")
     const resetData = this.state.data.map(item => ({ ...item, clicked: false }))
     return resetData;
   }
 
   handleCorrectGuess = newData => {
-    console.log("CORRECT")
 
-    const { topScore, score } = this.state; 
+    const { topScore, score } = this.state;
     const newScore = score + 1;
     const newTopScore = Math.max(newScore, topScore);
 
@@ -40,7 +37,6 @@ class App extends Component {
   }
 
   handleIncorrectGuess = newData => {
-    console.log("incorrect")
     this.setState({
       data: this.resetData(this.state.data),
       score: 0
@@ -64,15 +60,14 @@ class App extends Component {
         if (!newItem.clicked) {
           item.clicked = true;
           guessedCorrect = true;
-          console.log(item)
-        } 
+        }
       }
       return newItem;
 
     })
     this.shuffleData(this.state.data)
     guessedCorrect ? this.handleCorrectGuess(newData) : this.handleIncorrectGuess(newData);
-    
+
   }
 
   render() {
@@ -80,7 +75,7 @@ class App extends Component {
       <Wrapper>
         <Navbar score={this.state.score} topScore={this.state.topScore} />
         <Jumbotron />
-        <Container>
+        <Container >
           <Row>
             {this.state.data.map(item =>
               (<Col sm={3} >

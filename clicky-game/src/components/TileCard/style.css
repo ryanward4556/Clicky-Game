@@ -1,5 +1,14 @@
+.card {
+    border: none!important;
+}
+
+.card-container {
+    background-color: white!important;
+  }
+
 .card-img-top {
     height: 15rem!important;
     width: 10rem!important;
     object-fit: cover;
+    background-color: white;
 }
