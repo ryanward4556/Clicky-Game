@@ -8,10 +8,7 @@ function TileCard(props) {
     return (
         <button key={props.id} onClick={props.onClick}>
             <Card>
-                <Card.Img variant="top" src={props.image}/>
-                <Card.Body>
-                    <Card.Title>{props.name}</Card.Title>
-                </Card.Body>
+                <Card.Img variant="top" src={require("../../../public/images" + props.image)}/>
             </Card >
         </button>
     )

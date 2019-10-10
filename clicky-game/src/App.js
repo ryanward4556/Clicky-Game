@@ -7,20 +7,16 @@ import Jumbotron from './components/Jumbotron';
 // import TileCardContainer from './components/TileCardContainer';
 import TileCard from './components/TileCard';
 import { Container, Row, Col } from 'react-bootstrap'
-import players from "./players.json";
-
+import data from "./data.json"
 
 class App extends Component {
 
   state = {
-    data: players,
+    data: data,
     score: 0,
     topScore: 0,
   }
 
-  // componentDidMount() {
-
-  // }
 
   startApp() {
     this.setState({ data: this.shuffleData(this.state.data) })
@@ -36,7 +32,7 @@ class App extends Component {
   handleCorrectGuess = newData => {
     console.log("CORRECT")
 
-    const { topScore, score } = this.state; //  changed 'this' to newData
+    const { topScore, score } = this.state; 
     const newScore = score + 1;
     const newTopScore = Math.max(newScore, topScore);
 

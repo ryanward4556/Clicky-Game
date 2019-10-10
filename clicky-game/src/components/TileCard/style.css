@@ -1,5 +1,5 @@
-.card {
-    height: 330px;
-    margin: 0;
-    padding: 0;
+.card-img-top {
+    height: 15rem!important;
+    width: 10rem!important;
+    object-fit: cover;
 }

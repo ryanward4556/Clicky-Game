@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Allison Becker",
+        "image": "/allison.png",
+        "clicked": false
+    },
+    {
+        "id": 2,
+        "name": "Mattijs De Ligt",
+        "image": "/deligt.png",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "name": "Frenkie De Jong",
+        "image": "/frenkie.png",
+        "clicked": false
+    },
+    {
+        "id": 4,
+        "name": "Eden Hazard",
+        "image": "/hazard.jpg",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "name": "Marcelo",
+        "image": "/marcelo.jpg",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "name": "Kylian Mbappe",
+        "image": "/mbappe.png",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "name": "Lionel Messi",
+        "image": "/messi.png",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "name": "Luka Modric",
+        "image": "/modric.png",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "name": "Sergio Ramos",
+        "image": "/ramos.png",
+        "clicked": false
+    },
+    {
+        "id": 10,
+        "name": "Cristiano Ronaldo",
+        "image": "/ronaldo.png",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "name": "Dusan Tadic",
+        "image": "/tadic.jpg",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "name": "Virgil Van Dijk",
+        "image": "/vandijk.jpg",
+        "clicked": false
+    }
+]
